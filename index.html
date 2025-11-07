@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate International Sports Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="container"><!-- Header -->
+   <div class="header">
+    <h1 id="site-title">Ultimate International Sports Hub</h1>
+    <p id="welcome-message">Choose Your International Sport</p>
+    <div class="ticker" id="ticker">
+     🔴 LIVE: Real-time international sports updates!
+    </div>
+   </div><!-- Home Page -->
+   <div id="home-page" class="page active">
+    <div class="sports-grid">
+     <div class="sport-card" onclick="selectSport('Football')">
+      <div class="icon">
+       ⚽
+      </div>
+      <h3>Football</h3>
+      <p>International Matches</p>
+     </div>
+     <div class="sport-card" onclick="selectSport('Basketball')">
+      <div class="icon">
+       🏀
+      </div>
+      <h3>Basketball</h3>
+      <p>NBA &amp; International</p>
+     </div>
+     <div class="sport-card" onclick="selectSport('Tennis')">
+      <div class="icon">
+       🎾
+      </div>
+      <h3>Tennis</h3>
+      <p>Grand Slam Events</p>
+     </div>
+     <div class="sport-card" onclick="selectSport('Cricket')">
+      <div class="icon">
+       🏏
+      </div>
+      <h3>Cricket</h3>
+      <p>Test &amp; ODI Matches</p>
+     </div>
+     <div class="sport-card" onclick="selectSport('Rugby')">
+      <div class="icon">
+       🏉
+      </div>
+      <h3>Rugby</h3>
+      <p>International Tournaments</p>
+     </div>
+     <div class="sport-card" onclick="selectSport('Baseball')">
+      <div class="icon">
+       ⚾
+      </div>
+      <h3>Baseball</h3>
+      <p>MLB &amp; World Series</p>
+     </div>
+    </div>
+   </div><!-- Sport Detail Page -->
+   <div id="sport-page" class="page">
+    <div class="sport-detail"><button class="back-button" onclick="showPage('home-page')">← Back to Sports</button>
+     <h2 class="selected-sport-title" id="selected-sport">Selected Sport</h2>
+     <div class="scores-container" id="live-scores">
+      <div class="loading">
+       Loading scores
+      </div>
+     </div>
+    </div>
+   </div><!-- Chat Page -->
+   <div id="chat-page" class="page">
+    <div class="sport-detail"><button class="back-button" onclick="showPage('sport-page')">← Back to Scores</button>
+     <h2 class="selected-sport-title">Match Chat</h2>
+     <div class="chat-container">
+      <div class="chat-box" id="chat-box">
+       <div class="chat-message">
+        Welcome to the match chat! Share your thoughts about the game.
+       </div>
+      </div>
+      <div class="chat-input-container"><input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)"> <button class="send-button" onclick="sendMessage()">Send</button>
+      </div>
+     </div>
+    </div>
+   </div><!-- Footer -->
+   <div class="footer">
+    <p id="footer-text">Your Ultimate Gateway to International Sports</p>
+   </div>
+  </div>
+  <script src="script.js"></script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99aab7ff178b5492',t:'MTc2MjQ5NjM2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
